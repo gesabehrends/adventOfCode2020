@@ -8,5 +8,5 @@ let inputData = "";
 fs.readFile(inputFile, function(err, data) {
     inputData = data.toString();
     const { solution } = require(`./day_${day}.js`);
-    (solution(inputData.split('\n')));
+    solution(inputData.split('\n'));
 });
