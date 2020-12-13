@@ -8,5 +8,9 @@ let inputData = "";
 fs.readFile(inputFile, function(err, data) {
     inputData = data.toString();
     const { solution } = require(`./day_${day}.js`);
-    solution(inputData.split('\n'));
+    if (day == 4) {
+        solution(inputData.split('\n\n'));
+    } else {
+        solution(inputData.split('\n'));
+    }
 });
